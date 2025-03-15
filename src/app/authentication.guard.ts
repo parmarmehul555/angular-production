@@ -6,7 +6,7 @@ export const authenticationGuard: CanActivateFn = (route, state) => {
   if(localStorage.getItem("user")){
     return true;
   }else{
-    _router.navigate([''])
+    _router.navigate(['login'])
     return false;
   }
 };

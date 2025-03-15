@@ -11,8 +11,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { authenticationGuard } from './authentication.guard';
 
 export const routes: Routes = [
-    // {path:'',component:SignUpComponent},
-    {path:'',component:LoginComponent},
+    {path:'',component:SignUpComponent},
+    {path:'login',component:LoginComponent},
     // {path:'header',component:HeaderComponent},
     {path:'resume',component:ResumeBuilderComponent,canActivate:[authenticationGuard]},
     {path:'arrayCrud',component:ArryCrudComponent,canActivate:[authenticationGuard]},
