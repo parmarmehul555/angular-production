@@ -1,0 +1,182 @@
+<!-- <form [formGroup]="userForm">
+    <input type="text" placeholder="Enter UserName" name="username">
+    <br>
+    <span style="color: red;" *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">* Enter Username First</span>
+    <br>
+    <input type="password" placeholder="Enter Password" formControlName="password">
+    <br>
+    <span style="color: red;" *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">* Enter Password First</span>
+    <br>
+    <input type="text" placeholder="Enter Mobile Number" formControlName="contactNo">
+    <br>
+    <span *ngIf="userForm.get('contactNo')?.invalid && userForm.get('contactNo')?.touched" style="color: red;">* Enter valid contact No</span>
+    <br>
+    <button [disabled]="userForm.invalid">Login</button>
+</form> -->
+
+
+
+
+
+
+<!-- <div class="container">
+  <form [formGroup]="userForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        formControlName="username"
+        class="form-control"
+      />
+      <div class="text-danger" *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+        <span *ngIf="userForm.get('username')?.errors?.['required']">Name is required.</span>
+        <span *ngIf="userForm.get('username')?.errors?.['minlength']"> Name must be at least 3 characters long.</span> 
+        <span *ngIf="userForm.get('username')?.errors?.['pattern']"> Enter valid email</span> 
+      </div>
+
+      <br>
+
+      <input type="text" placeholder="Enter Password" formControlName="password">
+      <span></span>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        formControlName="email"
+        class="form-control"
+      />
+      <div class="text-danger" *ngIf="f['email'].invalid && f['email'].touched">
+        <small *ngIf="f['email'].errors?.['required']">Email is required.</small>
+        <small *ngIf="f['email'].errors?.['email']">Invalid email address.</small>
+      </div>
+    </div> -->
+
+    <!-- <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-control"
+      />
+      <div
+        class="text-danger"
+        *ngIf="f['password'].invalid && f['password'].touched"
+      > -->
+        <!-- <small *ngIf="f['password'].errors?.['required']">
+          Password is required.
+        </small> -->
+        <!-- <small *ngIf="f['password'].errors?.['minlength']">
+          Password must be at least 6 characters long.
+        </small> -->
+      <!-- </div>
+    </div> -->
+
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="registrationForm.invalid">
+      Submit
+    </button> -->
+
+
+
+  <!-- </form>
+</div> -->
+
+
+
+<!-- 
+<form [formGroup]="userForm">
+    <div>
+      <input
+        type="text"
+        placeholder="Enter Username"
+        formControlName="username"
+      />
+      <br />
+      <span *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched">
+        *Enter Username First
+      </span>
+    </div>
+    <br />
+    <div>
+      <input
+        type="password"
+        placeholder="Enter Password"
+        formControlName="password"
+      />
+      <br />
+      <span *ngIf="userForm.get('password')?.invalid && userForm.get('password')?.touched">
+        *Enter Password First
+      </span>
+    </div>
+    <br />
+    <button [disabled]="userForm.invalid">Login</button>
+  </form> -->
+  
+
+
+
+
+
+
+
+
+<!-- 
+<form [formGroup]="userForm">
+  <input type="text" placeholder="Enter UserName" formControlName="username">
+  <br>
+  <span *ngIf="userForm.get('username')?.invalid && userForm.get('username')?.touched" style="color: red;">Enter UserName first ! </span>
+  <br>
+
+  <input type="text" placeholder="Enter Email" formControlName="email">
+  <br>
+  <span *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+    <span *ngIf="userForm.get('email')?.errors?.['required']" style="color: red;">Enter email first !!</span>
+    <span *ngIf="userForm.get('email')?.errors?.['email']" style="color: red;">Enter valid email !!</span>
+  </span>
+
+  <br>
+
+  <input type="text" placeholder="Enter Mobile No ." formControlName="mobileNo">
+  <br>
+  <span *ngIf="userForm.get('mobileNo')?.invalid && userForm.get('mobileNo')?.touched" style="color: red;">Enter valid mobile no !!</span>
+  <br>
+
+  <button [disabled]="userForm.invalid">Submit</button>
+</form> -->
+
+
+
+
+
+
+
+<form [formGroup]="studentForm">
+  <input type="text" placeholder="Enter Student name" class="w-50" [ngStyle]="studentForm.get('studentName')?.invalid?obj:newObj" formControlName="studentName">
+  <span *ngIf="studentForm.get('studentName')?.invalid && studentForm.get('studentName')?.touched" style="color: red;">Enter Student Name</span>
+  <br><br>
+
+  <input type="text" placeholder="Enter Email" formControlName="email" class="form form-control w-50">
+  <span *ngIf="studentForm.get('email')?.invalid">
+    <span *ngIf="studentForm.get('email')?.errors?.['required']" style="color: red;">Enter Email First !!</span>
+    <span *ngIf="studentForm.get('email')?.errors?.['email']" style="color: red;">Enter valid email !!</span>
+  </span>
+  <br><br>
+
+  <input type="text" placeholder="Enter Password" class="form form-control w-50" formControlName="password">
+  <span *ngIf="studentForm.get('password')?.invalid" style="color: red;">Enter Password First !!</span>
+  <br><br>
+
+  <input type="text" placeholder="Enter Contact No" formControlName="contactNo" class="form form-control w-50">
+  <span *ngIf="studentForm.get('contactNo')?.invalid" style="color: red;">Enter valid contact no !!</span>
+  <br><br>
+
+  <input type="text" placeholder="Enter SPI" formControlName="spi" class="form form-control w-50">
+  <span *ngIf="studentForm.get('spi')?.invalid" style="color: red;">Enter Valid SPI</span>
+  <br><br>
+  
+  <button [disabled]="studentForm.invalid" (click)="saveData()">Submit</button>
+</form>
+

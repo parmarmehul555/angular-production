@@ -1,0 +1,24 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="signup-container">
+                    <div class="text-center">
+                        <h2>login page</h2>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Enter Email" formControlName="username">
+                    </div>
+                    <div class="mb-3">
+                        <input type="password" class="form-control" placeholder="Enter Password"  formControlName="password"> 
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary">
+                            login
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

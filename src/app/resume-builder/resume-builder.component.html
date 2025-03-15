@@ -1,0 +1,54 @@
+{{val}}
+
+<div class="container py-5">
+        <h1 class="text-center mb-4">Live Form</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="live-form" class="shadow p-4 rounded bg-light">
+                    <h4 class="text-primary mb-3">Personal Information</h4>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" (input)="dataFill($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact" class="form-label">Contact No.:</label>
+                        <input type="text" class="form-control" id="contact" name="contact" placeholder="Enter your contact number" (input)="dataFill($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email ID:</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" (input)="dataFill($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="spi" class="form-label">SPI:</label>
+                        <input type="text" class="form-control" id="spi" name="spi" placeholder="Enter your SPI" (input)="dataFill($event)">
+                    </div>
+                </form>
+
+                <form id="live-form" class="mt-4 shadow p-4 rounded bg-light" (submit)="onSubmit($event)">
+                    <h4 class="text-primary mb-3">Project Details</h4>
+                    <div class="mb-3">
+                        <label for="projname" class="form-label">Project Name:</label>
+                        <input type="text" class="form-control" id="projname" name="projname" placeholder="Enter project name" (input)="projectFill($event)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="projdesc" class="form-label">Short Description:</label>
+                        <textarea class="form-control" id="projdesc" name="projdesc" placeholder="Enter short description" rows="3" (input)="projectFill($event)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="projduration" class="form-label">Project Duration:</label>
+                        <input type="date" class="form-control" id="projduration" name="projduration" (input)="projectFill($event)">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Add</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <div class="bg-white shadow p-3 rounded">
+                    <h5 class="text-center">Form Output</h5>
+                    <pre>{{blank | json}}</pre>
+                </div>
+            </div>
+        </div>
+    </div>

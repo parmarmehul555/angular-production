@@ -1,0 +1,13 @@
+<form #signUpForm="ngForm">
+    <input type="text" placeholder="Enter Name" name="signUpForm.UserName" #UserName="ngModel" required [(ngModel)]="signUp.name"><br>
+    <span [ngStyle]="{'color':'red'}" *ngIf="UserName.invalid && UserName.touched">* Entet name first !!</span><br><br>
+    <input type="password" placeholder="Enter Password" name="signUpForm.password" #password="ngModel" required [(ngModel)]="signUp.pass"><br>
+    <span [ngStyle]="{'color':'red'}" *ngIf="password.invalid && password.touched">* Entet password first !!</span><br><br>
+    <input type="email" placeholder="Enter Password" name="signUpForm.email" #email="ngModel" email [(ngModel)]="signUp.email"><br>
+    <span [ngStyle]="{'color':'red'}" *ngIf="email.invalid && email.touched">* Entet email first !!</span><br><br>
+    <input type="text" placeholder="Enter mobile No." name="signUpForm.mobileNo" #mobileNo="ngModel" pattern="^[0-9]{10}$" [(ngModel)]="signUp.mobileNo"><br>
+    <span [ngStyle]="{'color':'red'}" *ngIf="mobileNo.invalid && mobileNo.touched">* Entet valid no !!</span><br><br>
+
+    <button class="btn btn-primary" (click)="signUpUser(signUpForm.value)" [disabled]="signUpForm.invalid">Sign Up</button>
+
+</form>

@@ -1,0 +1,24 @@
+<table>
+    <tr>
+      <td>
+        <input type="text" [(ngModel)]="obj.name" placeholder="Enter Name">
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="obj.surname" placeholder="Enter Surname">
+      </td>
+      <td colspan="2">
+        <button (click)="addStudent()">{{ isEdit == -1 ? "Add" : "Edit" }}</button>
+      </td>
+    </tr>
+  
+    <tr *ngFor="let ele of arr; let i = index">
+      <td>{{ ele.name }}</td>
+      <td>{{ ele.surname }}</td>
+      <td>
+        <input type="button" value="Delete" class="btn-danger" (click)="deleteStudent(i)">
+      </td>
+      <td>
+        <input type="button" value="Edit" class="btn-warning" (click)="selectIndex(i)">
+      </td>
+    </tr>
+  </table>

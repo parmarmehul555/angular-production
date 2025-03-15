@@ -1,0 +1,66 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="mb-3">
+                <input type="email" placeholder="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="dataFill($event)" name="username"
+                >    
+            </div>
+
+            <div class="mb-3">
+                <input type="email" placeholder="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="dataFill($event)" name="email"
+                >    
+            </div>
+
+            <div class="mb-3">
+                <input type="email" placeholder="contactNo" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="dataFill($event)" name="contactNo"
+                >    
+            </div>
+
+            <h1>Project Detail</h1>
+
+
+            <div class="mb-3">
+                <input type="email" placeholder="project title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="projectData($event)" name="project_title"
+                >    
+            </div>
+
+            <div class="mb-3">
+                <input type="email" placeholder="description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="projectData($event)" name="description"
+                >    
+            </div>
+
+            <div class="mb-3">
+                <input type="date" placeholder="startingData" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    (input)="projectData($event)" name="startingData"
+                >    
+            </div>
+
+            <input type="button" value="submit" class="btn btn-primary" (click)="addDetail()">
+        </div>
+
+        <div class="col-6">
+            <!-- {{stu|json}} -->
+
+
+            <h2>name : {{stu.username}}</h2>
+            <h2>email : {{stu.email}}</h2>
+            <h2>contact No : {{stu.contactNo}}</h2>
+
+
+            <div *ngFor="let temp of stu.projects">
+                <h2>{{temp.project_title}}</h2>
+                <h2>{{temp.description}}</h2>
+                <h2>{{temp.startingData}}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
